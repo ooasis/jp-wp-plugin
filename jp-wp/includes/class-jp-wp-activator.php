@@ -3,7 +3,7 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://example.com
+ * @link       https://joshua-project-wp-plugin.netlify.app
  * @since      1.0.0
  *
  * @package    JP_WP
@@ -18,7 +18,7 @@
  * @since      1.0.0
  * @package    JP_WP
  * @subpackage JP_WP/includes
- * @author     Your Name <email@example.com>
+ * @author     JP Workshop
  */
 class JP_WP_Activator {
 

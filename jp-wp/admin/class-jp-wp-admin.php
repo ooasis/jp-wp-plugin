@@ -3,7 +3,7 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       http://example.com
+ * @link       https://joshua-project-wp-plugin.netlify.app
  * @since      1.0.0
  *
  * @package    JP_WP
@@ -18,7 +18,7 @@
  *
  * @package    JP_WP
  * @subpackage JP_WP/admin
- * @author     Your Name <email@example.com>
+ * @author     JP Workshop
  */
 class JP_WP_Admin {
 
@@ -97,6 +97,17 @@ class JP_WP_Admin {
 		 */
 
 		wp_enqueue_script( $this->jp_wp, plugin_dir_url( __FILE__ ) . 'js/jp-wp-admin.js', array( 'jquery' ), $this->version, false );
+
+	}
+
+	/**
+	 * Create our custom filter widget
+	 *
+	 * @since    1.0.0
+	 */
+	public function register_widgets() {
+
+		register_widget( 'JP_WP_Widget' );
 
 	}
 

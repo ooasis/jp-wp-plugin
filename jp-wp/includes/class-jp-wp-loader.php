@@ -3,7 +3,7 @@
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://example.com
+ * @link       https://joshua-project-wp-plugin.netlify.app
  * @since      1.0.0
  *
  * @package    JP_WP
@@ -19,7 +19,7 @@
  *
  * @package    JP_WP
  * @subpackage JP_WP/includes
- * @author     Your Name <email@example.com>
+ * @author     JP Workshop
  */
 class JP_WP_Loader {
 

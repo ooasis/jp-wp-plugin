@@ -5,7 +5,7 @@
  *
  * This file is used to markup the public-facing aspects of the plugin.
  *
- * @link       http://example.com
+ * @link       https://joshua-project-wp-plugin.netlify.app
  * @since      1.0.0
  *
  * @package    JP_WP

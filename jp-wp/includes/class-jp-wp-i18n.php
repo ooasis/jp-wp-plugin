@@ -6,7 +6,7 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://example.com
+ * @link       https://joshua-project-wp-plugin.netlify.app
  * @since      1.0.0
  *
  * @package    JP_WP
@@ -22,7 +22,7 @@
  * @since      1.0.0
  * @package    JP_WP
  * @subpackage JP_WP/includes
- * @author     Your Name <email@example.com>
+ * @author     JP Workshop
  */
 class JP_WP_i18n {
 
