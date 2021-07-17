@@ -98,16 +98,18 @@ class JP_WP_Widget extends WP_Widget
 				//The API returns data in JSON format, so first convert that to an array of data objects
 				$responseObj = json_decode($response);
 				//Gather the air quality value and timestamp for the first and last elements
-				$peopleGroup = "<strong>" . $responseObj[0]->PeopNameInCountry . "</strong>";
-				$region = "<strong>" . $responseObj[0]->RegionName . "</strong>";
+				$peopleGroup = $responseObj[0]->PeopNameInCountry;
+				$region = $responseObj[0]->RegionName;
 				$image = $responseObj[0]->PeopleGroupPhotoURL;
 				$link = $responseObj[0]->PeopleGroupURL;
 
 				//This is the content that gets populated into the widget on your site
-				echo "<p>People Group: $peopleGroup <br>" .
-					"Region: $region <br>" .
-					"<img src='$image' /> <br>" .
-					"<a href='$link' targe='_blank'>Click to see more ...</a></p>";
+				echo "<div class='jp-wrap'>" .
+					"<div class='entry'><span class='title'>People Group: </span><span class='val'>$peopleGroup</span></div>" .
+					"<div class='entry'><span class='title'>Region: </span><span class='val'>$region</span></div>" .
+					"<div class='entry'><img alt='PG Photo' src='$image' /></div>" .
+					"<div class='entry'><a href='$link' targe='_blank'>Click to see more ...</a></div>" . 
+					"</div>";
 			}
 		} else {
 			echo "Please provide API key in configuration";

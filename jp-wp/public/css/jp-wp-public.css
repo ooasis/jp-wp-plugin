@@ -2,3 +2,21 @@
  * All of the CSS for your public-facing functionality should be
  * included in this file.
  */
+.jp-wrap {
+  font-size: 0.8em;
+}
+
+.jp-wrap .entry {
+  padding: 4px;
+}
+.jp-wrap .entry .title {
+  font-weight: bold;
+}
+
+.jp-wrap img {
+  max-width: 200px;
+}
+
+.jp-wrap a {
+  font-size: 0.7em;
+}
