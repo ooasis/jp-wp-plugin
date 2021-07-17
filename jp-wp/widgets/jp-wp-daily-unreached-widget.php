@@ -39,6 +39,8 @@ class JP_WP_Widget extends WP_Widget
 		<p>
 			<label for="<?php echo $this->get_field_id('api_key'); ?>"><?php _e('API Key:'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id('api_key'); ?>" name="<?php echo $this->get_field_name('api_key'); ?>" type="text" value="<?php echo esc_attr($api_key); ?>" />
+			<label for="<?php echo $this->get_field_id('caption'); ?>"><?php _e('Caption:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id('caption'); ?>" name="<?php echo $this->get_field_name('caption'); ?>" type="text" value="<?php echo esc_attr($caption); ?>" />
 		</p>
 
 	<?php
@@ -54,6 +56,7 @@ class JP_WP_Widget extends WP_Widget
 		// processes widget options to be saved
 		$instance          = $old_instance;
 		$instance['api_key'] = strip_tags($new_instance['api_key']);
+		$instance['caption'] = strip_tags($new_instance['caption']);
 		return $instance;
 	}
 
@@ -66,6 +69,7 @@ class JP_WP_Widget extends WP_Widget
 	{
 		extract($args);
 		$api_key = apply_filters('widget_api_key', empty($instance['api_key']) ? '' : $instance['api_key'], $instance, $this->id_base);
+		$caption = apply_filters('widget_caption', empty($instance['caption']) ? '' : $instance['caption'], $instance, $this->id_base);
 
 		/*
 		* The content of the widget
@@ -105,10 +109,11 @@ class JP_WP_Widget extends WP_Widget
 
 				//This is the content that gets populated into the widget on your site
 				echo "<div class='jp-wrap'>" .
+					"<div class='caption'>$caption</div>" .
 					"<div class='entry'><span class='title'>People Group: </span><span class='val'>$peopleGroup</span></div>" .
 					"<div class='entry'><span class='title'>Region: </span><span class='val'>$region</span></div>" .
-					"<div class='entry'><img alt='PG Photo' src='$image' /></div>" .
-					"<div class='entry'><a href='$link' targe='_blank'>Click to see more ...</a></div>" . 
+					"<div class='entry'><a href='$link' targe='_blank'><img alt='PG Photo' src='$image' /></a></div>" .
+					"<div class='entry'>From <a href='$link' targe='_blank'>Joshua Project</a></div>" . 
 					"</div>";
 			}
 		} else {

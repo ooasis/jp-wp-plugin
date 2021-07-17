@@ -3,14 +3,19 @@
  * included in this file.
  */
 .jp-wrap {
-  font-size: 0.8em;
+  font-size: 1em;
+}
+
+.jp-wrap .caption {
+  font-size: 1.1em;
+  font-weight: bold;
 }
 
 .jp-wrap .entry {
-  padding: 4px;
+  padding: 2px;
 }
-.jp-wrap .entry .title {
-  font-weight: bold;
+.jp-wrap .entry .val {
+  font-weight: 200;
 }
 
 .jp-wrap img {
@@ -18,5 +23,5 @@
 }
 
 .jp-wrap a {
-  font-size: 0.7em;
+  font-size: 0.9em;
 }
